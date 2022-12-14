@@ -16,8 +16,9 @@ class LoginController extends Controller
     {
 
         $login = $request->validate([
-            'email'=>'required',
-            'password'=>'required'
+            'name'=>'required',
+            'email'=>'required|email:dns',
+            'password'=>'required',
         ]);
 
         if (Auth::attempt($login)) {
@@ -27,5 +28,16 @@ class LoginController extends Controller
         }
 
         return back()->with('loginError', 'Login gagal! Silahkan coba lagi');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+ 
+        request()->session()->invalidate();
+ 
+        request()->session()->regenerateToken();
+ 
+        return redirect('/login ');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,6 +15,8 @@ class StudentController extends Controller
      */
     public function index()
     {
+        // $students = User::all();
+
         $students = Student::latest()->paginate(5);
 
         return view('students.index', compact('students'))
@@ -41,7 +44,7 @@ class StudentController extends Controller
     {
         $request->validate([
             'nis' => 'required',
-            'nama' => 'required',
+            'name' => 'required',
             'rombel' => 'required',
             'rayon' => 'required',
             'ket' => 'required',
@@ -86,7 +89,7 @@ class StudentController extends Controller
     {
         $request->validate([
             'nis' => 'required',
-            'nama' => 'required', 
+            'name' => 'required', 
             'rombel' => 'required',
             'rayon' => 'required',
             'ket' => 'required',

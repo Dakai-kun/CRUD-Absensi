@@ -3,11 +3,11 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
+            <div class="pull-left" style="background-color:orange;color:white;;border-radius:3px;margin-bottom:5px;padding-left:5px;padding-right:5px;padding-bottom:-1px">
                 <h2>CRUD Absensi</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('students.create') }}"> Create</a>
+                <a class="btn btn-success" style="background-color:purple;" href="{{ route('students.create') }}"> Create</a>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
         </div>
     @endif
      
-    <table class="table table-bordered">
+    <table style="border:gray;" class="table table-bordered">
         <tr>
             <th>No</th>
             <th>Nis</th>
@@ -26,13 +26,13 @@
             <th>Rombel</th>
             <th>Rayon</th>
             <th>Keterangan</th>
-            <th width="280px">Action</th>
+            <th>Action</th>
         </tr>
         @foreach ($students as $student)
         <tr>
             <td>{{ ++$i }}</td>
             <td>{{ $student->nis }}</td>
-            <td>{{ $student->nama }}</td>
+            <td>{{ $student->name }}</td>
             <td>{{ $student->rombel }}</td>
             <td>{{ $student->rayon }}</td>
             <td>{{ $student->ket}}</td>

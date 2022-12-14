@@ -10,5 +10,10 @@ class Student extends Model
     use HasFactory;
 
     protected $table = 'students';
-    protected $fillable = ['nis', 'nama', 'rombel', 'rayon', 'ket'];
+    protected $fillable = ['nis', 'name', 'rombel', 'rayon', 'ket'];
+
+    // public function user()
+    // {
+    //     return $this->belongsTo('App\Models\Student');
+    // }
 }

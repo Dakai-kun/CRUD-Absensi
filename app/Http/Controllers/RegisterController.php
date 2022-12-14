@@ -7,17 +7,21 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-        public function index()
-        {
-            return view('hello.register.index');
-        }
+    public function index()
+    {
+        return view('hello.register.index');
+    }
     public function store(Request $request)
     {
 
         $validateData=$request->validate([
             'name'=>'required',
-            'email'=>'required',
+            'email'=>'required|email:dns',
             'password'=>'required',
+            'nis'=>'required',
+            'rayon'=>'required',
+            'rombel'=>'required',
+            'ket'=>'required',
         ]);
 
         $validateData['password'] = bcrypt($validateData['password']);

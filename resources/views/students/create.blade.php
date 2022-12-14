@@ -30,13 +30,13 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nis:</strong>
-                <input type="text" name="nis" class="form-control" placeholder="NIS">
+                <input type="number" name="nis" class="form-control" placeholder="NIS">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nama:</strong>
-                <input type="text" name="nama" class="form-control" placeholder="Nama">
+                <input type="text" name="name" class="form-control" placeholder="Nama">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-success">Submit</button>
         </div>
     </div>
      

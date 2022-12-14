@@ -39,7 +39,7 @@
           <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
                   <strong>Nama:</strong>
-                  <input type="text" name="nama" class="form-control" placeholder="Nama" value="{{$student->nama}}">
+                  <input type="text" name="name" class="form-control" placeholder="Nama" value="{{$student->name}}">
               </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12">

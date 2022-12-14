@@ -19,11 +19,12 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', function () {
-    return view('hello.register.index');
+    return view('welcome');
 });
 
-Route::resource('students', StudentController::class);
-Route::get('/login', [LoginController::class, 'index']);
+Route::resource('students', StudentController::class)->middleware('auth');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authanticate']);
-Route::get('/register', [RegisterController::class,'index']);
+Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/register', [RegisterController::class,'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class,'store']);
